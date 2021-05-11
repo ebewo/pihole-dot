@@ -20,3 +20,4 @@ ADD stuff /temp
 
 RUN /bin/bash /temp/install.sh && \
     rm -f /temp/install.sh
+#force
