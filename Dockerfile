@@ -18,6 +18,7 @@ RUN mkdir -p /etc/stubby && \
 
 ADD stuff /temp
 
+VOLUME ["/config"]
+
 RUN /bin/bash /temp/install.sh && \
     rm -f /temp/install.sh
-#force
