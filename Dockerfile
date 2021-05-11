@@ -1,7 +1,10 @@
 FROM pihole/pihole:latest
 
 # COPY install.sh pihole-updatelists.* /tmp/pihole-updatelists/
-
+RUN apt-get -y update && \
+    apt-get -y dist-upgrade && \
+    apt-get -y install sudo bash nano
+ 
 RUN apt-get update && \
     apt-get install -Vy php-cli php-sqlite3 php-intl php-curl stubby && \
     apt-get clean && \
