@@ -1,8 +1,7 @@
 {
   "extends": [
     "config:base"
-  ]
-},
+  ],
   "packageRules": [
     {
       "updateTypes": [
@@ -12,3 +11,4 @@
       "automerge": true
     }
    ]
+}
