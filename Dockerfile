@@ -1,4 +1,4 @@
-FROM pihole/pihole:latest
+FROM pihole/pihole:v5.8.1
 
 # COPY install.sh pihole-updatelists.* /tmp/pihole-updatelists/
 RUN apt-get -y update && \
