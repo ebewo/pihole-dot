@@ -9,7 +9,7 @@ echo '#!/usr/bin/with-contenv bash' > /etc/services.d/pihole-dot/run
 echo 'cp -n /temp/stubby.yml /config/' >> /etc/services.d/pihole-dot/run
 # run stubby in background
 echo 's6-echo "Starting stubby"' >> /etc/services.d/pihole-dot/run
-echo 'stubby -g -C /config/stubby.yml' >> /etc/services.d/pihole-dot/run
+echo 'stubby -v 5 -C /config/stubby.yml' >> /etc/services.d/pihole-dot/run
 
 # finish file
 echo '#!/usr/bin/with-contenv bash' > /etc/services.d/pihole-dot/finish
