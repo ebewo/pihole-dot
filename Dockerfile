@@ -14,7 +14,7 @@ RUN apt-get update && \
 #    bash /tmp/pihole-updatelists/install.sh && \
 #    rm -fr /tmp/pihole-updatelists
 
-RUN [ "$(awk -F/ '$2 == "docker"' /proc/self/cgroup)" == "" ] && echo "Not Docker" || echo "This Docker"
+#RUN [ "$(awk -F/ '$2 == "docker"' /proc/self/cgroup)" == "" ] && echo "Not Docker" || echo "This Docker"
 RUN wget -O - https://raw.githubusercontent.com/jacklul/pihole-updatelists/master/install.sh | bash
 
 RUN mkdir -p /etc/stubby && \
